@@ -1,0 +1,211 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.article-header {
+  margin-top: 100px;
+}
+.article-header .header-category {
+  font-size: 20px;
+}
+.article-header .header-title {
+  margin: 30px auto 50px;
+}
+
+.article-main .article-subtitle {
+  margin: 10px 0 30px;
+}
+.article-main .article-datetime {
+  font-size: 20px;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.article-main .article-datetime time {
+  margin-right: 25px;
+}
+.article-main .article-datetime time::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 10px;
+  top: 0;
+  right: 0;
+  background-color: #B80000;
+}
+.article-main .article-body p {
+  font-size: 23px;
+}
+.article-main .article-body h3 {
+  font-size: 30px;
+}
+.article-main .article-body .suggested-stories {
+  margin-bottom: 50px;
+}
+.article-main .article-body .suggested-stories .story-card .col-sm-8 {
+  position: relative;
+}
+.article-main .article-body .suggested-stories .story-card .col-sm-8 p {
+  position: absolute;
+  top: 50%;
+  font-size: 21px;
+  font-weight: bold;
+  transform: translateY(-50%);
+}
+.article-main .article-body .suggested-stories .story-card:hover p {
+  text-decoration: underline;
+}
+.article-main .article-body .keyword {
+  font-size: 23px;
+  padding: 10px 25px;
+  background-color: #D2D2D2;
+}
+
+.comments {
+  margin-bottom: 25px;
+}
+.comments .comment-textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #B1AEAE;
+  border-radius: 5px;
+}
+.comments .comment-card {
+  margin-top: 25px;
+}
+.comments .comment-card .user-photo img {
+  clip-path: circle();
+}
+.comments .comment-card .comment-text {
+  padding: 20px;
+  background-color: #D2D2D2;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 15px;
+}
+.comments .comment-card .comment-text::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  right: -10px;
+  transform: rotate(45deg);
+  background-color: #D2D2D2;
+}
+.comments .comment-card .comment-text span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.comments .comment-card .comment-text p {
+  font-size: 18px;
+}
+.comments .button {
+  background-color: #B80000;
+  color: #fff;
+  border: 1px solid #B80000;
+  padding: 2px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.comments .button:hover {
+  background-color: #fff;
+  color: #B80000;
+}
+.comments .button {
+  font-size: 23px;
+  margin-top: 20px;
+}
+
+.related-articles .button {
+  background-color: #B80000;
+  color: #fff;
+  border: 1px solid #B80000;
+  padding: 2px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.related-articles .button:hover {
+  background-color: #fff;
+  color: #B80000;
+}
+.related-articles .button {
+  font-size: 23px;
+  margin-top: 20px;
+}
+
+.most-read-article {
+  position: relative;
+  margin-top: 25px;
+}
+.most-read-article:hover h4 {
+  text-decoration: underline;
+}
+.most-read-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 9px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.most-read-text h4.article-title {
+  font-size: 17px;
+  display: block;
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .most-read-text h4.article-title {
+    font-size: 14px;
+  }
+  .most-read-text time {
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) {
+  .article-body .suggested-stories .story-card .col-sm-8 p {
+    font-size: 15px !important;
+  }
+}
+@media (max-width: 768px) {
+  img {
+    width: 90%;
+  }
+  .article-header .header-category {
+    font-size: 15px;
+  }
+  .article-header .header-title h2 {
+    font-size: 19px;
+  }
+  .article-datetime {
+    padding: 5px;
+  }
+  .article-datetime time {
+    font-size: 15px;
+  }
+  .article-body p {
+    font-size: 15px !important;
+  }
+  .article-body .suggested-stories p {
+    position: relative !important;
+  }
+  .article-body iframe {
+    height: 200px;
+    width: 380px;
+  }
+  .article-main .article-body .keyword {
+    padding: 8px 18px;
+    font-size: 15px;
+  }
+  .related-articles .col-sm-4 {
+    margin-bottom: 15px;
+  }
+}
+
+/*# sourceMappingURL=article.css.map */

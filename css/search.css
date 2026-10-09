@@ -1,0 +1,110 @@
+.search-form {
+  margin-top: 90px;
+}
+.search-form input {
+  width: 87%;
+  padding: 8px 14px;
+  border: 1px solid #B1AEAE;
+  border-radius: 7px;
+}
+.search-form button {
+  background-color: #B80000;
+  color: #fff;
+  border: 1px solid #B80000;
+  padding: 2px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.search-form button:hover {
+  background-color: #fff;
+  color: #B80000;
+}
+.search-form button {
+  font-size: 17px;
+  margin-right: 15px;
+  padding: 7px 14px;
+}
+.search-line {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+.search-line span {
+  font-size: 17px;
+}
+.search-line select {
+  padding: 6px 12px;
+  border: 1px solid #B1AEAE;
+  border-radius: 7px;
+}
+.search-articles .article-card {
+  padding: 20px;
+  border-bottom: 1px dotted #B1AEAE;
+}
+.search-articles .article-card .article-link {
+  text-decoration: none;
+}
+.search-articles .article-card .article-link:hover h4 {
+  text-decoration: underline;
+}
+.search-articles .article-card h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.search-articles .article-card p {
+  font-size: 16px;
+  margin-top: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.search-articles .article-card time {
+  font-size: 16px;
+  color: #B1AEAE;
+}
+
+.more-resulte {
+  margin: 50px;
+}
+.more-resulte .button {
+  background-color: #B80000;
+  color: #fff;
+  border: 1px solid #B80000;
+  padding: 2px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.more-resulte .button:hover {
+  background-color: #fff;
+  color: #B80000;
+}
+.more-resulte .button {
+  font-size: 17px;
+}
+
+@media (max-width: 1200px) {
+  .search-form input {
+    width: 60%;
+  }
+}
+@media (max-width: 992px) {
+  .search-articles .article-card h4 {
+    font-size: 15px;
+  }
+  .search-articles .article-card p {
+    font-size: 13px;
+  }
+  .search-articles .article-card time {
+    font-size: 13px;
+  }
+  .more-resulte .button {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=search.css.map */

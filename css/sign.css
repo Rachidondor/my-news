@@ -1,0 +1,34 @@
+body {
+  padding-top: 80px;
+}
+
+form button.button {
+  background-color: #fff;
+  color: #B80000;
+  border: 1px solid #B80000;
+  padding: 2px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+form button.button:hover {
+  background-color: #B80000;
+  color: #fff;
+}
+
+a.ms-3 {
+  color: #B80000;
+}
+
+.social-media-login .login-button {
+  color: #B80000;
+  margin-left: 15px;
+  margin-top: 15px;
+  font-size: 25px;
+  transition: all 0.5s ease;
+}
+.social-media-login .login-button:hover {
+  color: rgba(184, 0, 0, 0.5);
+}
+
+/*# sourceMappingURL=sign.css.map */

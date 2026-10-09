@@ -1,0 +1,29 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+body {
+    padding-top: 80px;
+}
+
+form {
+    button.button {
+        @include button($white-color, $main-color, $main-color); 
+    }
+}
+
+a.ms-3 {
+    color: $main-color;
+}
+
+.social-media-login {
+    .login-button {
+        color: $main-color;
+        margin-left: 15px;
+        margin-top: 15px;
+        font-size: 25px;
+        transition: all .5s ease;
+        &:hover {
+            color: rgba($color: $main-color, $alpha: 0.5);
+        }
+    }
+}

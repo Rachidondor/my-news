@@ -1,0 +1,552 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Almarai", sans-serif !important;
+}
+img {
+    width: 100%;
+}
+.article {
+    &-category {
+        padding: 5px 10px;
+        background-color: $main-color;
+        color: $white-color;
+        margin-left: 10px;
+    }
+    &-title {
+        font-size: 20px;
+        display: inline;
+        color: $black-color;
+    }
+    &-link {
+        text-decoration: none;
+        color: $black-color;
+        &:hover {
+            text-decoration: underline;
+        }
+        img {
+            height: auto;
+            max-height: 149px;
+        }
+    }
+}
+
+.section-title {
+    @include section-title ($black-color, $main-color)
+}
+
+header {
+    .navbar {
+        padding: 10px;
+        border-bottom: 1px solid $gray-color;
+        &-brand {
+            color: $main-color;
+            font-size: 30px;
+        }
+        .nav-link {
+            font-size: 20px;
+            color: $black-color;
+            margin-right: 20px;
+            transition: all .5s ease;
+
+            &:hover {
+               color: $main-color;
+               text-decoration: underline;
+            }
+        }
+        .login {
+            position: relative;
+            &:hover {
+                .login-container {
+                    visibility: visible;
+                }
+            }
+            i {
+                font-size: 30px;
+                color: $gray-color;
+                margin-left: 40px;
+                cursor: pointer;
+            }
+            &-container {
+                position: absolute;
+                width: 250px;
+                height: 80px;
+                background-color: white;
+                border: 1px solid $gray-color;
+                border-radius: 10px;
+                padding: 20px;
+                text-align: center;
+                top: 50px;
+                right: -115px;
+                visibility: hidden;
+                transition: all .5s ease;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background-color: white;
+                    transform: rotate(45deg);
+                    top: -11px;
+                    right: 50%;
+                    border-top: 1px solid $gray-color;
+                    border-left: 1px solid $gray-color;
+                }
+                .button {
+                    @include button($main-color, $white-color, $main-color)
+                }
+            }
+        }
+        .login-button {
+            .button {
+                @include button($main-color, $white-color, $main-color);
+                font-size: 16px;
+                margin: 15px auto;
+                width: 50%;
+                text-align: center;
+                display: none;
+            }
+        }
+        form {
+            .search-icon {
+                padding: 2px;
+                i {
+                    color: $main-color;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    .header-news {
+        margin-top: 50px;
+        .carousel-news {
+            margin-top: 50px;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                height: 250px;
+                width: 20px;
+                top: 90px;
+                left: -9px;
+                background-color: $main-color;
+
+            }
+        }
+        .carousel-text {
+            padding: 20px 10px 70px;
+            color: $white-color;
+            background-color: rgb($color: $black-color, $alpha: 0.5);
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 749px;
+            h3 {
+                font-size: 21px;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 89px;
+                    width: 3px;
+                    background-color: $main-color;
+                    top: -9px;
+                    left: 249px;
+                }
+            }
+        }
+        .carousel-indicators {
+            left: -550px;
+            button {
+                height: 20px;
+                width: 20px;
+                text-indent: 0;
+            }
+        }
+        .carousel-item {
+            &:hover {
+                .carousel-text {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .header-articles {
+            margin-top: 50px;
+            .row {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+section {
+    &.news {
+        padding: 20px;
+        .button {
+            @include button ($main-color, $white-color, $main-color)
+        }
+    }
+    &.most-read {
+        padding: 50px;
+        background-color: $light-gray;
+        .card {
+            &-news {
+                padding: 50px;
+                margin: 30px;
+                background-color: $white-color;
+                a {
+                    color: $black-color;
+                    text-decoration: none;
+                }
+                &:hover {
+                    h4 {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            &-text {
+                h4 {
+                    font-size: 30px;
+                }
+                p {
+                    font-size: 14px;
+                    margin: 35px auto;
+                }
+                time {
+                    font-size: 16px;
+                    color: $gray-color;
+                }
+            }
+            &-img {
+                position: relative;
+                margin-bottom: 20px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 250px;
+                    height: 30px;
+                    bottom: -15px;
+                    right: 55px;
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+    &.opinions {
+        padding: 50px;
+        a {
+            text-decoration: none;
+        }
+        .opinions-card {
+            padding: 20px 10px;
+            margin-top: 25px;
+            background-color: rgba($color: $main-color, $alpha: 0.3);
+            transition: all .5s ease;
+            h5 {
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: $black-color;
+            }
+            .user-info {
+                margin-top: 25px;
+                img {
+                    width: 100px;
+                    clip-path: circle();
+                }
+                span {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: $main-color;
+                }
+            }
+            &:hover {
+                background-color: rgba($color: $main-color, $alpha: 0.5);
+                h5 {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &.videos {
+        padding: 50px;
+        background-color: $black-color;
+        h2 {
+            @include section-title($white-color, $main-color)
+        }
+        .slide-img {
+            position: relative;
+            img {
+                height: 250px;
+                width: 100%;
+                object-fit: cover;
+            }
+            i {
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                transform: translate(50%, -50%);
+                font-size: 60px;
+                color: $main-color;
+            }
+        }
+        .swiper {
+        width: 100%;
+        height: 100%;
+        padding: 20px 0 50px;
+        &-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        &-pagination {
+            &-bullet {
+                background-color: $gray-color;
+                width: 20px;
+                height: 20px;
+                margin: 10px;
+            }
+        }
+      }
+    }
+    &.latest-news {
+        padding: 50px;
+        .card-text {
+            p {
+               margin-top: 10px;
+            }
+            
+        }
+        .button {
+            @include button($main-color, $white-color, $main-color);
+            font-size: 20px;
+            margin-top: 25px;
+        }
+    }
+}
+
+footer {
+    padding-bottom: 50px;
+
+    .footer-title {
+        margin-bottom: 30px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 5px;
+            right: 0;
+            bottom: -15px;
+            background-color: $main-color;
+        }
+    }
+    .link-unstyled {
+        text-decoration: none;
+        color: $black-color;
+    }
+    .social-media {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        &-icon {
+            display: inline;
+            margin: 10px;
+            img {
+                width: 40px;
+            }
+        }
+    }
+    .footer-brand {
+        color: $main-color;
+        font-size: 30px;
+        text-decoration: none;
+        margin: auto;
+    }
+}
+
+@media (max-width: 1400px) {
+    header {
+        .header-news {
+            .carousel {
+                &-item {
+                    h3 {
+                        font-size: 19px;
+                        &::after {
+                            left: 330px;
+                        }
+                    }
+                }
+                &-indicators {
+                    left: -330px;
+                }  
+            }
+        }
+    }
+    .article {
+        &-title {
+            font-size: 19px;
+        }
+        &-category {
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    header {
+        .header-news {
+            .carousel {
+                &-indicators {
+                    left: -400px;
+                }
+                &-news {
+                    &::after {
+                        height: 190px;
+                        top: 90px;
+                    }
+                }
+            }
+        }
+    }
+    section {
+        &.most-read {
+            .card-text {
+                h4 {
+                    font-size: 23px;
+                }
+            }
+        }
+        &.opinions {
+            .opinions-card {
+                padding: 15px 7px;
+                .user-info {
+                    img {
+                        width: 89px;
+                    }
+                }
+            }
+        }
+    }
+    .article {
+        &-title {
+            font-size: 16px;
+        }
+        &-link {
+            img {
+                max-height: 120px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    header {
+        .header-news {
+            .carousel {
+                &-item {
+                    h3::after {
+                        display: none;
+                    }
+                }
+                &-indicators {
+                    left: 0;
+                }
+            }
+        }
+        .login {
+            display: none;
+        }
+        .navbar {
+            .login-button {
+                .button {
+                   display: block; 
+                }
+            }
+        }         
+    }
+    section {
+        &.most-read {
+            .card {
+                &-news {
+                    padding: 25px;
+                }
+                &-text {
+                    h4 {
+                        font-size: 17px;
+                    }
+                    p {
+                        font-size: 14px;
+                        margin: 25px auto;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                               line-clamp: 4;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    } 
+                    time {
+                        font-size: 14px;
+                    }
+                }
+                &-img::after {
+                    height: 20px;
+                    bottom: -10px;
+                }
+            }
+        }
+        &.latest-news {
+            .article-title {
+                font-size: 15px;
+            }
+            .article-category {
+                font-size: 13px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    header {
+        .header-news {
+            .carousel {
+                &-news {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    section {
+        &.most-read {
+            .card-news {
+                padding: 15px;
+            }
+            .card-img::after {
+                display: none;
+            }
+        }
+    }
+    footer {
+        text-align: center;
+        .footer-title {
+            color: $main-color;
+            margin-top: 20px;
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
